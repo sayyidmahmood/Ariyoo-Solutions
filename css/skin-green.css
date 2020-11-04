@@ -7,10 +7,10 @@
      background: #529e19;
 }
  form .form-group button[type="submit"]{
-     background: #FF6600;
+     background: #FF0000;
 }
  .navbar-nav .nav-item.active a{
-     color:#FF6600;
+     color:#FF0000;
 }
  .navbar-nav .nav-item.active a.dropdown-toggle::after{
      color:#529e19;
@@ -27,7 +27,7 @@
      width:25px;
      height:2px;
      vertical-align: middle;
-     background-color: #FF6600;
+     background-color: #FF0000;
      margin: 5px 0;
 }
  #slider .tp-caption.heading span{
@@ -37,7 +37,7 @@
      background:#529e19;
 }
  section#portfolio .sort-btn.active, section#portfolio .sort-btn:hover {
-     background:#FF6600;
+     background:#FF0000;
 }
  section#testimonials .testimonials-slider .item .client_detail .name_designation h5{
      color:#529e19;
@@ -59,10 +59,10 @@
      color:#529e19;
 }
  .separator ul li{
-     background:#FF6600;
+     background:#FF0000;
 }
  .separator.left-align ul li{
-     background:#FF6600;
+     background:#FF0000;
 }
  .pagination .page-item.active .page-link, .pagination .page-link:hover{
      background:#529e19 !important;
@@ -107,7 +107,7 @@
      font-weight: 500;
 }
  .project .label-bg {
-     background: #FF6600;
+     background: #FF0000;
 }
  .blog_card .post-detail .posted_by a{
      color:#529e19;
@@ -117,7 +117,7 @@
      color: #529e19;
 }
  footer .contact_info i{
-     color:#FF6600;
+     color:#FF0000;
 }
  footer .newsletter h4{
      color:#529e19;
@@ -179,8 +179,8 @@
      width:100%;
      height:100%;
 
-background-image: -webkit-gradient(linear, left top, right top, from(#FF6600), color-stop(#f17624), color-stop(#f17624), to(#FF6600));
-    background-image: linear-gradient(to right, #FF6600, #f17624, #f17624, #FF6600);
+background-image: -webkit-gradient(linear, left top, right top, from(#FF0000), color-stop(#000000), color-stop(#000000), to(#FF0000));
+    background-image: linear-gradient(to right, #FF0000, #000000, #000000, #FF0000);
 
      display:block;
      position:absolute;
@@ -246,10 +246,10 @@ section#blog-post-list .post-detail .description a:hover, section#blog-with-side
      color: #529e19;
 }
  section#contact-us .info ul li .icon i:before{
-     color:#FF6600;
+     color:#FF0000;
 }
  section#contact-us .form-header{
-     background:#262E39;
+     background: #000000;;
 }
  section#faq #accordion button.btn-link span{
      color:#529e19;

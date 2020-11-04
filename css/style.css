@@ -484,57 +484,72 @@
 
 
 .loader{
-    width: 100px;
-    height: 120px;
-    margin: 40px auto;
+    margin: 40px 0;
+}
+.loader .loader-inner{
+    display: block;
+    width: 26px;
+    height: 26px;
     position: relative;
-    animation: loading-1 5s cubic-bezier(.8,0,.2,1) infinite;
+    margin: 1px auto;
+    background: #FF0000;
 }
 .loader .box-1{
-    width: 1px;
-    height: 0;
-    border-top: 50px solid #FF6600;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    transform-origin: 50% 100%;
-    animation: loading-2 5s linear infinite;
+    top: 0;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+}
+.loader .box-1:after{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 26px;
+    background: #FF0000;
+    margin-left: 1px;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
 }
 .loader .box-2{
-    width: 1px;
-    height: 0;
-    border-bottom: 50px solid #262E39;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    transform: scale(0);
-    transform-origin: 50% 100%;
-    animation: loading-3 5s linear infinite;
+    top: 0;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
-.loader .box-3{
-    border-left: 1px dotted #262E39;
+.loader .box-2:after{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
     position: absolute;
-    top: 50px;
-    left: 50px;
-    animation: loading-4 5s linear infinite;
+    left: 26px;
+    background: #FF0000;
+    margin-left: 1px;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
-@keyframes loading-1{
-    90%{ transform: rotate(0deg); }
-    100%{ transform: rotate(180deg); }
+@-webkit-keyframes loading1{
+    0% {
+        background-color: #FF0000;
+    }
+    100% {
+        background-color: #fff;
+    }
 }
-@keyframes loading-2{
-    90%{ transform: scale(0); }
-    100%{ transform: scale(0);}
+@keyframes loading1{
+    0% {
+        background-color: #FF0000;
+    }
+    100% {
+        background-color: #fff;
+    }
 }
-@keyframes loading-3{
-    10%{ transform: scale(0); }
-    90%{ transform: scale(1); }
-    100%{ transform: scale(1); }
-}
-@keyframes loading-4{
-    10%{ height: 40px; }
-    100%{ height: 40px; }
-}
-
-
  .preloader {
      position: fixed;
      top: 0;
@@ -545,7 +560,7 @@
      z-index: 99999;
 }
  
-.demo{ background: #f53b57; }
+.demo{ background: #FF0000; }
 /****---- Default CSS ----****/
 /****---- Homepage 1 Start ----****/
 /*---- Header ----*/
@@ -1421,7 +1436,7 @@
      /* background:#fff; */
      /* background-image: -webkit-gradient(linear, left top, right top, from(#e7c818), color-stop(#f3b019), color-stop(#f3b019), to(#e7c818));
      background-image: linear-gradient(to right, #f5d418, #fffc38, #fffc38, #f5d418); */
-    background: #262E39;
+    background: #000000;
      border:solid 1px #e0e0e0;
      transition: all 0.5s ease;
 }
@@ -1845,7 +1860,7 @@
     text-align:center;
     border:solid 1px rgb(212, 212, 212);
   }
-  .logo-wrapper:hover, .logo-wrapper.active{background:#ffffff;border:1px solid rgba(255, 102, 0, 1);box-shadow:0px 0px 20px #FF6600;}
+  .logo-wrapper:hover, .logo-wrapper.active{background:#ffffff;border:1px solid rgba(255, 102, 0, 1);box-shadow:0px 0px 20px #FF0000;}
   .logo-wrapper .check-icon{position:absolute;top:-40px;margin:0 auto 0 -20px;left:50%;opacity:0;transition:all 0.5s ease 0s;}
   
   .logo-wrapper img {
@@ -2915,12 +2930,12 @@
      margin-top: 0;
 }
 footer.index-3 .foothead{
-    color: #FF6600;
+    color: #FF0000;
 }
 /****---- Homepage 3 Start ----****/
 /****---- About Us ----****/
  section#inner-banner {
-     background:url(../img/contact\ us.jpg) no-repeat fixed 50% center;
+     background:url(../img/contact\ us\ 2.jpg) no-repeat fixed 50% center;
      margin: 0 auto;
      background-size:cover;
 }
@@ -4283,8 +4298,8 @@ footer.index-3 .foothead{
 }
 
 .yellow-btn {
-    background-image: -webkit-gradient(linear, left top, right top, from(#FF6600), color-stop(#f17624), color-stop(#f17624), to(#FF6600));
-    background-image: linear-gradient(to right, #FF6600, #f17624, #f17624, #FF6600);
+    background-image: -webkit-gradient(linear, left top, right top, from(#FF0000), color-stop(#000000), color-stop(#000000), to(#FF0000));
+    background-image: linear-gradient(to right, #FF0000, #000000, #000000, #FF0000);
   }
   .btn-style {
     font-size: 14px;
@@ -4713,168 +4728,3 @@ footer.index-3 .foothead{
 /****---- Error 404 End ----****/
   
 
-   /* ----------------------------------------------------------------
-       [ 06 Process ]
-  -----------------------------------------------------------------*/
-    
-  
- .spanwork{
-    display: inline-block;
-    text-decoration: none;
-    color: inherit;
- }
-  
-  .section-padding {
-    padding: 50px ;
-  }
-  
-  
-  .process .item {
-    position: relative;
-    z-index: 4;
-  }
-  .process .item img {
-    position: absolute;
-    width: 70%;
-    right: -40%;
-    top: 15px;
-    opacity: .5;
-  }
-  .process .item img.tobotm {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
-  }
-  .process .item.odd {
-    margin-top: 50px;
-  }
-  .process .item .cont {
-    padding: 50px 30px;
-    background-color: #fff;
-    -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    position: relative;
-    z-index: 3;
-    -webkit-transition: all .3s;
-    transition: all .3s;
-  }
-  .process .item .cont:hover {
-    background-color: #FF6600;
-  }
-  .process .item .cont:hover h2 {
-    color: rgb(0, 0, 0);
-  }
-  .process .item .cont:hover p {
-    color: #eee;
-  }
-  .process .item .icon {
-    color: #FF6600;
-    font-size: 30px;
-    width: 80px;
-    height: 80px;
-    line-height: 85px;
-    border-radius: 50%;
-    border: 1px dashed #eee;
-    margin-bottom: 30px;
-  }
-  .process .item h3 {
-    position: absolute;
-    top: 25px;
-   
-    left: 0;
-    width: 100%;
-    color: rgb(0, 0, 0);
-    font-size: 50px;
-    font-weight: bold;
-    opacity: .1;
-    z-index: -1;
-  }
-  .process .item h2 {
-    color: #222;
-    font-size: 30px;
-    margin-top: 25px;
-    margin-bottom: 15px;
-  }
-  .process .item p {
-    font-size: 14px;
-    color: #999;
-  }
-  .pp{
-      color: #ffffff;
-      font-size: 18px;
-      font-weight: bold;
-  }
-  
-  /* ----------------------------------------------------------------
-       [ End Process ]
-  -----------------------------------------------------------------*/
-  /* ----------------------------------------------------------------
-        [ Responsive ]
-  -----------------------------------------------------------------*/
-  @media screen and (min-width: 1200px) {
-    .container {
-      max-width: 1200px;
-    }
-  }
-  @media screen and (max-width: 991px) {
-    .mb-md50 {
-      margin-bottom: 50px;
-    }
-  
-    .mb-md30 {
-      margin-bottom: 30px;
-    }
-  
-    .mb-md0 {
-      margin-bottom: 0;
-    }
-  
-  
-    .process .item img {
-      display: none;
-    }
-  
-    .process .item.odd {
-      margin-top: 0;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .mb-sm50 {
-      margin-bottom: 50px;
-    }
-  
-    .mb-sm30 {
-      margin-bottom: 30px;
-    }
-  
-    .hero .extra-title {
-      font-size: 22px;
-    }
-  
-    .tabs-section .nav-pills .nav-link {
-      padding: 12px 0;
-    }
-  
-    .tabs-section .nav-pills .nav-item {
-      width: 33.33333%;
-      text-align: center;
-    }
-  
-    .works .filtering .filter {
-      padding: 0;
-    }
-  
-    .works .filtering span {
-      margin: 0;
-    }
-  
-
-  }
-  @media screen and (max-width: 480px) {
-   
-  
-    .works .filtering span {
-      padding: 5px 15px;
-    }
-  }
-  
