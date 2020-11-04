@@ -535,57 +535,70 @@
 } */
 
 .loader{
-    width: 100px;
-    height: 60px;
-    margin: 50px auto 0;
-    border: 5px solid #000000;
+    margin: 40px 0;
+}
+.loader .loader-inner{
+    display: block;
+    width: 26px;
+    height: 26px;
     position: relative;
-    z-index: 1;
-    background-color: #FF0000;
+    margin: 1px auto;
+    background: #FF0000;
 }
-.loader-page{
-    background: transparent;
-    width: 50px;
-    height: 60px;
-    margin: 0 auto;
-    border-top: 5px solid #000000;
-    border-bottom: 5px solid #000000;
-    border-right: 5px solid #000000;
-    transform-origin: 0% 50%;
+.loader .box-1{
+    top: 0;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+}
+.loader .box-1:after{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
     position: absolute;
-    left: 50%;
-    top: -5px;
-    animation: flip 1.2s infinite linear forwards;
+    left: 26px;
+    background: #FF0000;
+    margin-left: 1px;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+    -webkit-animation-delay: .5s;
+    animation-delay: .5s;
 }
-.loader-page:nth-child(1){
-    z-index: -1;
-    animation-delay: 1.4s;
+.loader .box-2{
+    top: 0;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
 }
-.loader-page:nth-child(2){
-    z-index: -2;
-    animation-delay: 2.8s;
+.loader .box-2:after{
+    content: "";
+    display: block;
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    left: 26px;
+    background: #FF0000;
+    margin-left: 1px;
+    -webkit-animation: loading1 2s infinite;
+    animation: loading1 2s infinite;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
 }
-.loader-page:nth-child(3){
-    z-index: -3;
-    animation-delay: 4.2s;
-}
-@keyframes flip{
-    0%{ transform: perspective(600px) rotateY(0deg); }
-    20%{ background: transparent; }
-    29.9%{ background: transparent; }
-    30%{
-        background: transparent;
-        transform: perspective(200px) rotateY(-90deg);
+@-webkit-keyframes loading1{
+    0% {
+        background-color: #FF0000;
     }
-    54.999%{ opacity: 1; }
-    55%{ opacity: 0; }
-    60%{
-        background: transparent;
-        transform: perspective(200px) rotateY(-180deg);
+    100% {
+        background-color: #fff;
     }
-    100%{
-        background: transparent;
-        transform: perspective(200px) rotateY(-180deg);
+}
+@keyframes loading1{
+    0% {
+        background-color: #FF0000;
+    }
+    100% {
+        background-color: #fff;
     }
 }
  .preloader {
